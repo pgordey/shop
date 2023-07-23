@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+<div class="woocommerce">
+
+
+
+<div id="signup_div_wrapper">
+
+    <h1 class="mb-1 text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Зарегистрироваться</font></font></h1>
+
+    <form method="post" class="register">
+        		<p class="woocommerce-FormRow woocommerce-FormRow--first form-row form-row-first">
+			<label for="reg_sr_firstname"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Имя </font></font><span class="required"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label>
+			<input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="sr_firstname" id="reg_sr_firstname" value="" required="">
+		<div class="invalid-feedback">This field is required</div></p>
+
+		<p class="woocommerce-FormRow woocommerce-FormRow--last form-row form-row-last">
+			<label for="reg_sr_lastname"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Фамилия </font></font><span class="required"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label>
+			<input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="sr_lastname" id="reg_sr_lastname" value="" required="">
+		<div class="invalid-feedback">This field is required</div></p>
+
+
+        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+            <label for="reg_email"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Адрес электронной почты </font></font><span class="required"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label>
+            <input type="email" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="email" id="reg_email" value="" required="">
+        <div class="invalid-feedback">This field is required</div></p>
+
+            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                <label for="reg_password"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Пароль </font></font><span class="required"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label>
+                <input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password" id="reg_password" required="">
+            <div class="invalid-feedback">This field is required</div></p>
+
+            <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="18655dc03f"><input type="hidden" name="_wp_http_referer" value="/my-account/">            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input type="submit" class="btn btn-brand btn-block btn-lg mb-4 mt-3" style="margin:0;" name="register" value="Зарегистрироваться"></font></font>
+        <div class="invalid-feedback">This field is required</div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

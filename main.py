@@ -20,6 +20,14 @@ class Item(db.Model):
     text = db.Column(db.Text, nullable=False)
 
 
+
+class registration(db.Model):
+    sr_firstname = db.Column(db.Integer, primary_key=True)
+    sr_lastname = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.Integer, nullable=False)
+    password = db.Column(db.Boolean, default=True)
+
+
 @app.route('/')
 def index():
         return render_template('index.html',)
@@ -28,6 +36,30 @@ def index():
 @app.route('/general')
 def general():
         return render_template('general.html',)
+
+
+
+
+@app.route('/registration', methods=['POST', 'GET'])
+def registration():
+    if request.method == "POST":
+        sr_firstname = request.form['sr_firstname']
+        sr_lastname = request.form['sr_lastname']
+        email = request.form['email']
+        password = request.form['password']
+
+        registration = required(sr_firstname=sr_firstname, sr_lastname=sr_lastname, email=email, password=password)
+
+        try:
+            db.session.add(registration)
+            db.session.commit()
+            return redirect('/')
+        except:
+            return 'Ошибка'
+    else:
+        return render_template("registration.html")
+
+        return render_template('registration.html',)
 
 
 

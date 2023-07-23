@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 def index():
-    return "Привет всем"
+    return "Привет"
 
 
 if __name__ == "__main__":

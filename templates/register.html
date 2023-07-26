@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+
+{% endblock %}
+
+
+{% block body %}
+
+
+<form action="/register" method="post">
+    <br>
+  <label>Имя:</label>
+  <input type="text" class="form-control" id="nane" name="name" required minlength="4" title="Имя" placeholder="Имя">
+
+  <label for="email">Email:</label>
+  <input type="text" class="form-control" id="email" name="email" required title="Email" placeholder="Email">
+
+  <br>
+  <label for="password">Пароль:</label>
+  <input type="password" class="form-control" id="password" name="password" required minlength="4" title="Password" placeholder="Password">
+
+  <br>
+  <label for="confirm-password">Подтверждение пароля:</label>
+  <input type="password" class="form-control" id="confirm-password" name="confirm_password" required minlength="4" title="Confirm Password" placeholder="Подтверждение пароля">
+
+  <br>
+  <button class="btn btn-primary w-100 py-2" type="submit">Регистрация</button>
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+{% endblock %}

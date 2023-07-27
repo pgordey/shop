@@ -6,12 +6,24 @@
 
 {% block body %}
 
-
-<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-<button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-
-
+<table border="0" class="profile-table">
+	<tr><td valign="top">
+		<div class="profile-ava"><img src="{{ url_for('userava') }}"></div>
+		<div class="profile-load">
+		<form action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+			<p><input type="file" name="file">
+			<p><input type="submit" value="Загрузить">
+		</form>
+		</div>
+	</td>
+	<td valign="top" class="profile-panel">
+		<p><a href="{{url_for('logout')}}">Выйти из профиля</a>
+		<ul class="profile-info">
+		<li>Имя: {{ current_user.getName() }}</li>
+		<li>Email: {{ current_user.getEmail() }}</li>
+		</ul>
+	</td></tr>
+</table>
 
 
 

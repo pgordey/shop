@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}
 
+
 {% endblock %}
 
 
@@ -8,10 +9,11 @@
 
 
 <form action="/register" method="post">
-    <br>
+  <br>
   <label>Имя:</label>
   <input type="text" class="form-control" id="nane" name="name" required minlength="4" title="Имя" placeholder="Имя">
 
+  <br>
   <label for="email">Email:</label>
   <input type="text" class="form-control" id="email" name="email" required title="Email" placeholder="Email">
 
@@ -22,9 +24,15 @@
   <br>
   <label for="confirm-password">Подтверждение пароля:</label>
   <input type="password" class="form-control" id="confirm-password" name="confirm_password" required minlength="4" title="Confirm Password" placeholder="Подтверждение пароля">
-
+  <br>
+  <p><input type="checkbox" name="remainme" /> Запомнить меня
+  <br>
   <br>
   <button class="btn btn-primary w-100 py-2" type="submit">Регистрация</button>
+  <br>
+    <br>
+<label>Уже есть учетная запись?:</label>
+  <p><a href="{{url_for('login')}}">Авторизация</a>
 
 
 
